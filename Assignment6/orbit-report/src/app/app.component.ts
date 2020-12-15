@@ -40,7 +40,14 @@ export class AppComponent {
     searchTerm = searchTerm.toLowerCase();
     for(let i=0; i < this.sourceList.length; i++) {
       let name = this.sourceList[i].name.toLowerCase();
+      let type = this.sourceList[i].type.toLowerCase();
+      let orbitType = this.sourceList[i].orbitType.toLowerCase();
+      
       if (name.indexOf(searchTerm) >= 0) {
+        matchingSatellites.push(this.sourceList[i]);
+      } else if (type.indexOf(searchTerm) >= 0) {
+        matchingSatellites.push(this.sourceList[i]);
+      } else if (orbitType.indexOf(searchTerm) >= 0) {
         matchingSatellites.push(this.sourceList[i]);
       }
     }
@@ -51,7 +58,7 @@ export class AppComponent {
 
 }
 
-
+// old code that populated the table before we fetched different data:
 // [
 //   new Satellite("SiriusXM", "Communication", "2009-03-21", "LOW", true),
 //   new Satellite("Cat Scanner", "Imaging", "2012-01-05", "LOW", true),

@@ -28,5 +28,5 @@ export class OrbitCountsComponent implements OnInit {
 
 }
 
+// This also works for the counter() "if" statement:
 // if (satellite.type.toLowerCase().includes(typeOfSatellite.toLowerCase())) {
-  // This also works for the counter() "if" statement.
